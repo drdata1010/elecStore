@@ -40,6 +40,7 @@ public class Order {
     private User user;
     @OneToMany(mappedBy = "order", fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     private List<OrderItem> orderItems = new ArrayList<>();
+    //fetch type EAGER is used so that when we fetch order we will get user info as well, if we dont want this to happen then we should use LAZY
 
 
 
